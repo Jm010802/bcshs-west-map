@@ -1,0 +1,343 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/css/src/bg.jpg');
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Change text color for better contrast */
+}
+
+body.modal-open {
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.navbar {
+    background-color: #1730d0;  /* Deep blue color */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    height: 90px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background: none;  /* Remove the blue background */
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 30px;  /* Increased spacing between items */
+    padding: 15px 25px;
+    top: 15%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: all 0.3s;
+}
+
+/* Style for the active link (HOME) */
+.nav-links a.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);  /* Semi-transparent white */
+    border: 2px solid #9370DB;  /* Light purple border */
+    border-radius: 5px;
+}
+
+/* Remove the previous active background effect */
+.nav-links li.active::before {
+    display: none;
+}
+
+/* Hover effect */
+.nav-links a:hover:not(.active) {
+    color: #9370DB;  /* Light purple on hover */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
+.LogoImage {
+    height: 100px;
+    margin-top: 20%;
+}
+
+.logoText {
+    font-size: 35px;
+    margin-top: 30%;
+    margin-left: 3%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-section {
+    text-align: center;
+    background-color: rgba(245, 165, 35, 0.587); /* Change to your desired color with transparency */
+    padding: 50px 20px;
+    color: white;
+    height: 755px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero-section h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.location-button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 23px;
+    border: 1px solid #222222;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: #efeccc;
+    color: #222222;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.location-button:hover{
+    border-color: #000000;
+    background: #f7f7f7;
+}
+
+.contact-info {
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin-left: 41%;
+    margin-top: 2%;
+}
+
+.contact-info p {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center the icon and text vertically */
+    color: #ffffff; /* Ensure text color is white */
+}
+
+.contact-info a {
+    color: #ffffff; /* Change this to your desired color */
+    text-decoration: none;
+}
+
+.button-container {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 23px;
+    border: 1px solid #222222;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: #241bcc;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-top: 15px;
+    width: 9%;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: none;
+}
+
+.button-container img {
+    width: 25px; 
+    height: 25px; 
+    margin-left: 5px;
+    position: absolute;
+    margin-top: -5px;
+}
+
+.school-title {
+    background-color: rgba(255, 255, 255, 0.8); /* Changed from solid white to 80% opacity white */
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    margin-left: -20px;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.school-title h1,
+.school-title h2 {
+    margin: 0;
+    font-size: 58px;
+}
+
+.school-title h1 {
+    color: #f57c0d;
+}
+
+.school-title h2{
+    color: #1730d0;
+}
+
+.icon {
+    width: 1em; /* Adjust width to match text size */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+    margin-right: 0.5em; /* Space between icon and text */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    margin-top: -10%;
+}
+
+.modal-content {
+    position: relative; /* Ensure the close button is positioned relative to this container */
+    background-color: #fefefe; /* Background color */
+    margin: 15% auto; /* Centered */
+    padding: 20px; /* Add padding for spacing */
+    width: 80%; /* Width of the modal */
+    height: 80%; /* Adjust height as needed */
+    max-height: 90vh; /* Set a maximum height */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.modal-content h2 {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color: #040404;
+}
+
+.modal-content button {
+    text-transform: uppercase;
+    margin: 20px; /* Space between image and button */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Font size */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.modal-content button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.close {
+    position: absolute; /* Position it relative to the modal */
+    top: 10px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.close-icon {
+    width: 25px; /* Set width for the icon */
+    height: 25px; /* Set height for the icon */
+}
+
+#floor-plan-iframe {
+    border: none; /* Remove border from iframe */
+    width: 100%; /* Make iframe responsive */
+    height: 800px; /* Set a fixed height */
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
+
+    .logoText {
+        font-size: 28px; /* Adjust logo text size */
+    }
+
+    .hero-section {
+        padding: 30px 10px; /* Adjust padding */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .contact-info {
+        margin-left: 5%; /* Adjust margin for smaller screens */
+    }
+
+    .location-button, .button-container {
+        width: 100%; /* Make buttons full width */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .school-title {
+        margin-left: 0; /* Center title on smaller screens */
+    }
+}
+
+/* Additional media query for smaller devices */
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 18px; /* Further adjust font size */
+    }
+
+    .hero-section h1 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .hero-section h2 {
+        font-size: 20px; /* Adjust subheading size */
+    }
+
+    .location-button, .button-container {
+        padding: 8px; /* Adjust padding */
+    }
+}

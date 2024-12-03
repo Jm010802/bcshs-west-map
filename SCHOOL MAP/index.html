@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BCSHS WEST CAMPUS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/src/Icon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img class="LogoImage" src="src/Logo.png" alt="School Logo">
+                <h1 class="logoText">WESTERNERS  <br> MAP</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div class="school-title">
+            <h1>BIÑAN CITY SENIOR <br> HIGH SCHOOL</h1>
+            <h2>WEST CAMPUS</h2>
+        </div>
+        <button class="location-button">TURN ON LOCATION</button>
+        <div class="contact-info">
+            <p><img src="src/location.png" alt="Location Icon" class="icon"> Purok 3, Brgy. Langkiwa, Biñan City, Laguna</p>
+            <p><img src="src/mail.png" alt="Email Icon" class="icon"> 
+                <a href="mailto:bcshswc.registrarsoffice@gmail.com">bcshswc.registrarsoffice@gmail.com</a>
+            </p>
+        </div>
+        <a class="button-container" href="#" onclick="openModal()">
+            Get Directions
+            <img src="src/external-link.png" alt="External Link">
+        </a>
+
+        <div id="modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">
+                    <img src="src/close.png" alt="Close" class="close-icon">
+                </span>
+                <h2>Select Building</h2>
+                <button onclick="openFloorPlanModal('first')">First Building</button>
+                <button onclick="openFloorPlanModal('second')">Second Building</button>
+            </div>
+        </div>
+
+        <div id="floor-plan-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeFloorPlanModal()">
+                    <img src="src/close.png" alt="Close" class="close-icon">
+                </span>
+                <iframe id="floor-plan-iframe" src="" width="800" height="600"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

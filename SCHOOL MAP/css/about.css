@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/css/src/bg.jpg');
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Change text color for better contrast */
+}
+
+.navbar {
+    background-color: #1730d0;  /* Deep blue color */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    height: 90px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background: none;  /* Remove the blue background */
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 30px;  /* Increased spacing between items */
+    padding: 15px 25px;
+    top: 15%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: all 0.3s;
+}
+
+/* Style for the active link (HOME) */
+.nav-links a.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);  /* Semi-transparent white */
+    border: 2px solid #9370DB;  /* Light purple border */
+    border-radius: 5px;
+}
+
+/* Remove the previous active background effect */
+.nav-links li.active::before {
+    display: none;
+}
+
+/* Hover effect */
+.nav-links a:hover:not(.active) {
+    color: #9370DB;  /* Light purple on hover */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
+.LogoImage {
+    height: 100px;
+    margin-top: 20%;
+}
+
+.logoText {
+    font-size: 35px;
+    margin-top: 30%;
+    margin-left: 3%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.box-container {
+    height: 820px;
+    background-color: rgba(228, 195, 142, 0.587); /* Change to your desired color with transparency */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Light border */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the boxes */
+}
+
+.school-info {
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1; /* Allow the box to grow and fill space */
+    margin: 10px; /* Optional: Add some margin between boxes */
+}
+
+.school-info ul {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(136, 134, 131, 0.587); /* Change to your desired color with transparency */
+    width: 35%;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Light border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    list-style-type: none; /* Remove default list styling */
+    padding: 20px; /* Remove padding */
+    color: #333; /* Darker text color */
+    margin-left: 50%;
+    margin-top: 5%
+}
+
+.school-info li {
+    margin: 20px 0; /* Space between list items */
+    font-size: 18px; /* Font size for list items */
+    color: #ffffff; /* Slightly lighter text color */
+}
+
+.school-info2 {
+    height: 20%;
+    text-align: center;
+    flex: 1; /* Allow the box to grow and fill space */
+    margin: 10px; /* Optional: Add some margin between boxes */
+}
+
+.school-info2 ul {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(136, 134, 131, 0.587); /* Change to your desired color with transparency */
+    height: 300%;
+    width: 35%;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Light border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    list-style-type: none; /* Remove default list styling */
+    padding: 20px; /* Remove padding */
+    color: #ffffff; /* Darker text color */
+    margin-top: 7%;
+    text-align: left;
+}
+
+.school-info2 li {
+    margin: 20px 0; /* Space between list items */
+    font-size: 18px; /* Font size for list items */
+    color: #ffffff; /* Slightly lighter text color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
+
+    .logoText {
+        font-size: 28px; /* Adjust logo text size */
+    }
+
+    .warning {
+        font-size: 36px; /* Adjust warning text size */
+    }
+}
+
+/* Additional media query for smaller devices */
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 18px; /* Further adjust font size */
+    }
+}

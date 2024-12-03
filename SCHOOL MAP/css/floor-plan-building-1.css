@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.floor-plan{
+    text-align: center;
+}
+
+.floor-plan h1{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.floor-plan img {
+    margin-top: -15%;
+    margin-right: -20%;
+    height: 100%;
+    width: 35%;
+    transform: rotate(270deg);
+    margin-left: -20%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .floor-plan h1 {
+        font-size: 36px; /* Adjust heading size */
+    }
+
+    .floor-plan img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Additional media query for smaller devices */
+@media (max-width: 480px) {
+    .floor-plan h1 {
+        font-size: 28px; /* Further adjust heading size */
+    }
+}
